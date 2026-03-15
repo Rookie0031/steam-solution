@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Services from "@/components/Services";
 import SteamAreas from "@/components/SteamAreas";
 import Teaching from "@/components/Teaching";
 import Gallery from "@/components/Gallery";
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Services />
         <SteamAreas />
         <Teaching />
         <Gallery />

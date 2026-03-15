@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "소개", href: "#about" },
+  { label: "서비스", href: "#services" },
   { label: "교육 영역", href: "#steam" },
   { label: "강의 실적", href: "#teaching" },
   { label: "경력", href: "#experience" },
