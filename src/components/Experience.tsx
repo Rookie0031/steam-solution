@@ -39,11 +39,27 @@ const experiences = [
   },
 ];
 
-const credentials = [
+const history = [
   { title: "연세대학교 기계공학과 졸업", period: "2015 ~ 2021" },
-  { title: "Apple Developer Academy @POSTECH", period: "2022 ~ 2023" },
-  { title: "WWDC 2022 Swift Student Challenge 수상", period: "2022" },
-  { title: "Junction Asia Hackathon 팀 리더 수상", period: "2022" },
+  {
+    title: "한국 최초 Apple 개발자 양성 프로그램 이수",
+    subtitle: "Apple Developer Academy @POSTECH",
+    period: "2022 ~ 2023",
+  },
+  {
+    title: "포항공대 창업 프로그램 이수",
+    subtitle: "POSTECH Startup Program",
+    period: "2022",
+  },
+  {
+    title: "AI 스타트업 · 제조 대기업 · 미국 대기업 등 다양한 환경 근무",
+    period: "2021 ~ 현재",
+  },
+  {
+    title: "300명+ 수료생 면접·이력서 코칭 진행",
+    subtitle: "부트캠프 및 취업 준비생 대상",
+    period: "2024 ~ 현재",
+  },
 ];
 
 export default function Experience() {
@@ -53,8 +69,8 @@ export default function Experience() {
         <AnimatedSection>
           <SectionLabel
             label="Background"
-            title="경력 · 배경"
-            description="교육 콘텐츠의 기반이 되는 실무 경력입니다."
+            title="경력 · 연혁"
+            description="교육 콘텐츠의 기반이 되는 실무 경력과 주요 이력입니다."
           />
         </AnimatedSection>
 
@@ -108,16 +124,21 @@ export default function Experience() {
           <div>
             <AnimatedSection delay={0.2}>
               <h3 className="text-sm font-mono text-accent tracking-widest uppercase mb-6">
-                Education & Awards
+                History
               </h3>
               <div className="space-y-4">
-                {credentials.map((c, i) => (
+                {history.map((h, i) => (
                   <div
                     key={i}
                     className="bg-card border border-border rounded-xl p-4 hover:border-accent/30 transition-colors"
                   >
-                    <p className="font-medium text-sm mb-1">{c.title}</p>
-                    <p className="text-xs text-muted font-mono">{c.period}</p>
+                    <p className="font-medium text-sm mb-1">{h.title}</p>
+                    {h.subtitle && (
+                      <p className="text-xs text-text-secondary mb-1">
+                        {h.subtitle}
+                      </p>
+                    )}
+                    <p className="text-xs text-muted font-mono">{h.period}</p>
                   </div>
                 ))}
               </div>
