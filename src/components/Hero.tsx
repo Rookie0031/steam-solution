@@ -33,7 +33,11 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-4 py-1.5 mb-8">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
             <span className="text-sm text-text-secondary">
-              교육 · 강의 · 기업 출강 · 컨설팅 문의 가능
+              교육 · 강의 · 기업 출강
+            </span>
+            <span className="w-px h-3.5 bg-border" />
+            <span className="text-sm text-text-secondary">
+              전문 교육 컨설팅
             </span>
           </div>
         </motion.div>
