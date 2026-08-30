@@ -31,13 +31,13 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6 py-32 text-center">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 py-20 md:py-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-4 py-1.5 mb-8">
+          <div className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-4 py-1.5 mb-6">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
             <span className="text-sm text-text-secondary">
               교육 · 강의 · 기업 출강
@@ -50,32 +50,32 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          className="mb-4"
+          className="mb-3"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <div className="inline-flex items-center gap-2 mb-6">
-            <div className="w-10 h-10 bg-gradient-to-br from-accent to-accent-secondary rounded-xl flex items-center justify-center">
+          <div className="inline-flex items-center gap-2">
+            <div className="w-9 h-9 bg-gradient-to-br from-accent to-accent-secondary rounded-xl flex items-center justify-center">
               <span className="text-white text-sm font-bold">ST</span>
             </div>
           </div>
         </motion.div>
 
         <motion.h1
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
           <span className="block">STEAM</span>
-          <span className="block mt-2 bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
+          <span className="block mt-1 bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
             Solution
           </span>
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-8"
+          className="text-base md:text-lg text-text-secondary max-w-2xl mx-auto mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -88,15 +88,15 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          className="flex justify-center gap-6 md:gap-10 mb-12"
+          className="flex justify-center gap-6 md:gap-10 mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           {pillars.map((p, i) => (
             <div key={i} className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 bg-card border border-border rounded-xl flex items-center justify-center">
-                <p.icon size={22} className={p.color} />
+              <div className="w-10 h-10 bg-card border border-border rounded-xl flex items-center justify-center">
+                <p.icon size={20} className={p.color} />
               </div>
               <span className={`text-xs font-medium ${p.color}`}>
                 {p.label}
@@ -121,7 +121,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          className="mt-16 md:mt-20"
+          className="mt-8 md:mt-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -131,14 +131,14 @@ export default function Hero() {
               <a
                 key={i}
                 href="#gallery"
-                className="group relative w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden border border-border shrink-0"
+                className="group relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden border border-border shrink-0"
               >
                 <Image
                   src={photo.src}
                   alt={photo.alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 768px) 96px, 128px"
+                  sizes="(max-width: 768px) 80px, 96px"
                   priority={i === 0}
                 />
               </a>
@@ -146,7 +146,7 @@ export default function Hero() {
           </div>
           <a
             href="#gallery"
-            className="block text-center text-sm text-text-secondary hover:text-accent mt-4 transition-colors"
+            className="block text-center text-sm text-text-secondary hover:text-accent mt-3 transition-colors"
           >
             교육 현장 더 보기 →
           </a>
