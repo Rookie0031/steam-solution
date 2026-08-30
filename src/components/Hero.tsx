@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowDown, Mail, BookOpen, Code2, Wrench } from "lucide-react";
 
@@ -7,6 +8,12 @@ const pillars = [
   { icon: BookOpen, label: "인문학", color: "text-amber-400" },
   { icon: Code2, label: "소프트웨어", color: "text-blue-400" },
   { icon: Wrench, label: "하드웨어", color: "text-emerald-400" },
+];
+
+const heroPhotos = [
+  { src: "/images/gallery/corporate-lecture.png", alt: "계림요업 유체역학 기업 출강" },
+  { src: "/images/gallery/cloud-lecture-1.png", alt: "클라우드 강의 현장" },
+  { src: "/images/gallery/mechanical-engineering.jpg", alt: "기계역학 강의" },
 ];
 
 export default function Hero() {
@@ -110,6 +117,38 @@ export default function Hero() {
           >
             <Mail size={18} />
             교육 문의하기
+          </a>
+        </motion.div>
+
+        <motion.div
+          className="mt-16 md:mt-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <div className="flex justify-center gap-3 md:gap-4">
+            {heroPhotos.map((photo, i) => (
+              <a
+                key={i}
+                href="#gallery"
+                className="group relative w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden border border-border shrink-0"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 768px) 96px, 128px"
+                  priority={i === 0}
+                />
+              </a>
+            ))}
+          </div>
+          <a
+            href="#gallery"
+            className="block text-center text-sm text-text-secondary hover:text-accent mt-4 transition-colors"
+          >
+            교육 현장 더 보기 →
           </a>
         </motion.div>
 
