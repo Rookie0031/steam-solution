@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Audience from "@/components/Audience";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import SteamAreas from "@/components/SteamAreas";
@@ -15,6 +16,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Audience />
         <About />
         <Services />
         <SteamAreas />
